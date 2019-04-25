@@ -1,4 +1,4 @@
-package com.swhong0205.reactivekotiln
+package com.swhong0205.reactivekotlin
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus

@@ -1,4 +1,4 @@
-package com.swhong0205.reactivekotiln
+package com.swhong0205.reactivekotlin
 
 import org.junit.Test
 import org.junit.runner.RunWith

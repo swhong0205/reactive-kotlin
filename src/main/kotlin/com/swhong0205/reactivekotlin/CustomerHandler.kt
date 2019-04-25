@@ -1,4 +1,4 @@
-package com.swhong0205.reactivekotiln
+package com.swhong0205.reactivekotlin
 
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.BodyInserters.fromObject
