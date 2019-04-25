@@ -1,5 +1,6 @@
 package com.swhong0205.reactivekotlin
 
+import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.BodyInserters.fromObject
 import org.springframework.web.reactive.function.server.ServerRequest
@@ -25,4 +26,11 @@ class CustomerHandler(val customerService: CustomerService) {
             }.onErrorResume(Exception::class) {
                 badRequest().body(fromObject(ErrorResponse("error creating customer", it.message ?: "error")))
             }
+
+    fun delete(serverRequest: ServerRequest) =
+            customerService.deleteCustomer(serverRequest.pathVariable("id").toInt())
+                    .flatMap {
+                        if (it) ok().build()
+                        else status(HttpStatus.NOT_FOUND).build()
+                    }
 }
