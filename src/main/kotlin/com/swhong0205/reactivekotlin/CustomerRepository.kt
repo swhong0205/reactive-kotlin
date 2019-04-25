@@ -25,6 +25,6 @@ class CustomerRepository(private val template: ReactiveMongoTemplate) {
 
     fun create(customer: Mono<Customer>) = template.save(customer)
     fun findById(id: Int) = template.findById<Customer>(id)
-    fun deleteById(id: Int) = template.remove(Query(where("_id").isEqualTo(id)),Customer::class.java)
-    fun findCustomers(nameFilter: String) = template.find(Query(where("name").regex(".*$nameFilter.*","i")), Customer::class.java)
+    fun deleteById(id: Int) = template.remove(Query(where("_id").isEqualTo(id)), Customer::class.java)
+    fun findCustomers(nameFilter: String) = template.find(Query(where("name").regex(".*$nameFilter.*", "i")), Customer::class.java)
 }
