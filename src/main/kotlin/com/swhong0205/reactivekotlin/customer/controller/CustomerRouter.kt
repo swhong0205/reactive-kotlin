@@ -1,4 +1,4 @@
-package com.swhong0205.reactivekotlin
+package com.swhong0205.reactivekotlin.customer.controller
 
 import org.springframework.context.annotation.Bean
 import org.springframework.stereotype.Component

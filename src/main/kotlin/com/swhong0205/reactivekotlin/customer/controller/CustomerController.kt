@@ -1,5 +1,7 @@
-package com.swhong0205.reactivekotlin
+package com.swhong0205.reactivekotlin.customer.controller
 
+import com.swhong0205.reactivekotlin.customer.service.CustomerService
+import com.swhong0205.reactivekotlin.customer.model.Customer
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
